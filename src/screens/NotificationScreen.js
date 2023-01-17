@@ -24,7 +24,7 @@ const NotificationScreen = ({navigation}) => {
             color={colors.blueDark}
           />
         </TouchableOpacity>
-        <Text style={styles.heading}>Pick Topics</Text>
+        <Text style={styles.heading}>Notifications</Text>
         <View></View>
       </View>
       <ScrollView style={{
