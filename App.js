@@ -11,6 +11,9 @@ import NotificationScreen from './src/screens/NotificationScreen';
 import QuestionScreen from './src/screens/QuestionScreen';
 import ComingSoonScreen from './src/screens/ComingSoonScreen';
 import TopicListScreen from './src/screens/TopicListScreen';
+import Papers from './src/screens/PastPpaersScreen';
+import ResourceScreen from './src/screens/ResourceScreen';
+import PapersScreen from './src/screens/PastPpaersScreen';
 
 
 
@@ -77,6 +80,20 @@ const App = () => {
         <Screen
           name="TopicListScreen"
           component={TopicListScreen}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Screen
+          name="PastPapersScreen"
+          component={PapersScreen}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Screen
+          name="ResourceScreen"
+          component={ResourceScreen}
           options={{
             headerShown: false,
           }}

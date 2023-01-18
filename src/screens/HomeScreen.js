@@ -124,7 +124,10 @@ const HomeScreen = () => {
               <Text style={styles.sectionText}>Schedules</Text>
             </View>
           </TouchableNativeFeedback>
-          <TouchableNativeFeedback>
+          <TouchableNativeFeedback
+            onPress={() => {
+              navagation.navigate('PastPapersScreen');
+            }}>
             <View
               style={{
                 ...styles.sectionItem,
@@ -148,7 +151,10 @@ const HomeScreen = () => {
             </View>
           </TouchableNativeFeedback>
 
-          <TouchableNativeFeedback>
+          <TouchableNativeFeedback
+            onPress={() => {
+              navagation.navigate('ResourceScreen');
+            }}>
             <View
               style={{
                 ...styles.sectionItem,
