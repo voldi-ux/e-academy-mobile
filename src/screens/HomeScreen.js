@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState} from 'react';
 import {
   View,
   Text,
@@ -22,9 +22,12 @@ import TopNav from '../components/nav/Nav';
 import SearchInput from '../components/searchInput/SearchInput';
 import Tabs from '../components/tab/Tabs';
 import { colors } from '../resources/colors';
+import Menu from "../components/Menu/Menu"
 
 const HomeScreen = () => {
   const navagation = useNavigation();
+  const [menuVisible, setMenuVissible] = useState(false);
+
   return (
     <ImageBackground
       source={require('../resources/images/bg.png')}
@@ -167,7 +170,9 @@ const HomeScreen = () => {
           </TouchableNativeFeedback>
         </View>
       </ScrollView>
-      <Tabs />
+      {/* conditionaly rendering the menu */}
+      {menuVisible && <Menu setVisible={setMenuVissible} />}
+      <Tabs openMenu={() => setMenuVissible(true)} />
     </ImageBackground>
   );
 };

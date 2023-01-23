@@ -7,11 +7,13 @@ import MCicon from 'react-native-vector-icons/MaterialCommunityIcons';
 import SIcon from 'react-native-vector-icons/SimpleLineIcons';
 import {colors} from '../../resources/colors';
 
-const Tabs = () => {
+const Tabs = ({ openMenu }) => {
     const navigation = useNavigation();
     const navigateTo = (screen) => {
         navigation.navigate(screen);
-    }
+  }
+  
+
   return (
     <View style={styles.tabs}>
       <View style={styles.tabContainer}>
@@ -22,9 +24,7 @@ const Tabs = () => {
           <IoIcon name="ios-home-outline" size={35} color={colors.white} />
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => {
-            navigation.navigate('PostScreen');
-          }}>
+          onPress={openMenu}>
           <MCicon name="square-edit-outline" size={35} color={colors.white} />
         </TouchableOpacity>
         <TouchableOpacity
