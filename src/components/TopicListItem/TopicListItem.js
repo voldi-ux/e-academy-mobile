@@ -9,9 +9,9 @@ import {
 import {colors} from '../../resources/colors';
 
 // should recieve title
-const TopicListItem = ({title}) => {
+const TopicListItem = ({title,...props}) => {
   return (
-    <TouchableNativeFeedback>
+    <TouchableNativeFeedback {...props} >
       <View style={styles.ListItemContainer}>
         <Text style={styles.heading}>{title}</Text>
         <Switch />

@@ -58,7 +58,9 @@ const TopicListScreen = ({ navigation }) => {
         </ScrollView>
       </View>
 
-      <TouchableNativeFeedback>
+      <TouchableNativeFeedback onPress={() => {
+        navigation.navigate('QuestionsNumberScreen');
+      }}>
         <View style={styles.button}>
           <Text style={styles.buttonTxt}>Practice</Text>
         </View>

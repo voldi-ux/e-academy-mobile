@@ -1,11 +1,11 @@
 import React from 'react';
 import {StatusBar} from 'react-native';
-import HomeScreen from './src/screens/HomeScreen';
 
 import {NavigationContainer} from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
+import HomeScreen from './src/screens/HomeScreen';
 import PostScreen from './src/screens/PostScreen';
 import ProfileScreen from './src/screens/ProfileScreen';
 import StatScreen from './src/screens/StatsScreen';
@@ -17,6 +17,9 @@ import Papers from './src/screens/PastPpaersScreen';
 import ResourceScreen from './src/screens/ResourceScreen';
 import PapersScreen from './src/screens/PastPpaersScreen';
 import GradeSelectionScreen from "./src/screens/GardeSelectionScreen"
+import OpenQuestionScreen from './src/screens/OpenPaper';
+import ViewPdfSCreen from './src/screens/ViewPdfScreen';
+import QuestionsNumberScreen from './src/screens/QuestionsNumber';
 
 const {Navigator, Screen} = createNativeStackNavigator();
 
@@ -102,6 +105,29 @@ const App = () => {
         <Screen
           name="GradeSelectionScreen"
           component={GradeSelectionScreen}
+          options={{
+            headerShown: false,
+          }}
+        />
+
+        <Screen
+          name="OpenQuestionScreen"
+          component={OpenQuestionScreen}
+          options={{
+            headerShown: false,
+          }}
+        />
+
+        <Screen
+          name="ViewPdfSCreen"
+          component={ViewPdfSCreen}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Screen
+          name="QuestionsNumberScreen"
+          component={QuestionsNumberScreen}
           options={{
             headerShown: false,
           }}

@@ -53,7 +53,9 @@ const papers = [
 const PapersScreen = ({navigation}) => {
   const renderItem = ({item}) => {
     return (
-      <View style={styles.sectionItem}>
+      <TouchableOpacity style={styles.sectionItem} onPress={() => {
+        navigation.navigate('OpenQuestionScreen');
+      }}>
         <Text style={styles.sectionItemText}>{item.name}</Text>
         {!item.donloaded ? (
           <IoIcon name="download-outline" size={25} color={colors.gold} />
@@ -64,7 +66,7 @@ const PapersScreen = ({navigation}) => {
             color={colors.green}
           />
         )}
-      </View>
+      </TouchableOpacity>
     );
   };
   return (
