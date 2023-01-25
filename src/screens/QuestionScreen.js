@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -20,8 +20,10 @@ import SearchInput from '../components/searchInput/SearchInput';
 import Tabs from '../components/tab/Tabs';
 import {colors} from '../resources/colors';
 import QuestionView from '../components/question/QuestionView';
+import Menu from '../components/Menu/Menu';
 
 const QuestionScreen = () => {
+    const [menuVisible, setMenuVissible] = useState(false);
   return (
     <ImageBackground
       source={require('../resources/images/bg.png')}
@@ -44,7 +46,9 @@ const QuestionScreen = () => {
         <QuestionView />
         <QuestionView />
       </ScrollView>
-      <Tabs />
+
+      {menuVisible && <Menu setVisible={setMenuVissible} />}
+      <Tabs openMenu={() => setMenuVissible(true)} />
     </ImageBackground>
   );
 };

@@ -3,7 +3,9 @@ import {StatusBar} from 'react-native';
 import HomeScreen from './src/screens/HomeScreen';
 
 import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+
 import PostScreen from './src/screens/PostScreen';
 import ProfileScreen from './src/screens/ProfileScreen';
 import StatScreen from './src/screens/StatsScreen';
@@ -14,8 +16,7 @@ import TopicListScreen from './src/screens/TopicListScreen';
 import Papers from './src/screens/PastPpaersScreen';
 import ResourceScreen from './src/screens/ResourceScreen';
 import PapersScreen from './src/screens/PastPpaersScreen';
-
-
+import GradeSelectionScreen from "./src/screens/GardeSelectionScreen"
 
 const {Navigator, Screen} = createNativeStackNavigator();
 
@@ -94,6 +95,13 @@ const App = () => {
         <Screen
           name="ResourceScreen"
           component={ResourceScreen}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Screen
+          name="GradeSelectionScreen"
+          component={GradeSelectionScreen}
           options={{
             headerShown: false,
           }}

@@ -29,7 +29,7 @@ const Tabs = ({ openMenu }) => {
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate('StatsScreen');
+            navigation.navigate('ComingSoonScreen');
           }}>
           <IoIcon name="bar-chart-outline" size={35} color={colors.white} />
         </TouchableOpacity>

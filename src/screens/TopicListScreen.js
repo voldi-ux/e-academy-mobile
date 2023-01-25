@@ -13,7 +13,8 @@ import IoIcon from 'react-native-vector-icons/Ionicons';
 import TopicListItem from '../components/TopicListItem/TopicListItem';
 
 const TopicListScreen = ({ navigation }) => {
- 
+  
+  
   return (
     <View
       style={{

@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -6,9 +6,8 @@ import {
   StyleSheet,
   ImageBackground,
   ScrollView,
-
 } from 'react-native';
-import { useNavigation } from "@react-navigation/native";
+import {useNavigation} from '@react-navigation/native';
 
 import IoIcon from 'react-native-vector-icons/Ionicons';
 import Micon from 'react-native-vector-icons/MaterialIcons';
@@ -16,17 +15,18 @@ import MCicon from 'react-native-vector-icons/MaterialCommunityIcons';
 import OIcon from 'react-native-vector-icons/Octicons';
 import SIcon from 'react-native-vector-icons/SimpleLineIcons';
 
-
 //components
 import TopNav from '../components/nav/Nav';
 import SearchInput from '../components/searchInput/SearchInput';
 import Tabs from '../components/tab/Tabs';
-import { colors } from '../resources/colors';
-import Menu from "../components/Menu/Menu"
+import {colors} from '../resources/colors';
+import Menu from '../components/Menu/Menu';
 
 const HomeScreen = () => {
-  const navagation = useNavigation();
+  const navigation = useNavigation();
   const [menuVisible, setMenuVissible] = useState(false);
+
+  console.log(navigation.getState());
 
   return (
     <ImageBackground
@@ -92,7 +92,7 @@ const HomeScreen = () => {
         <View style={styles.sectionContainer}>
           <TouchableNativeFeedback
             onPress={() => {
-              navagation.navigate('TopicListScreen', {
+              navigation.navigate('GradeSelectionScreen', {
                 subject: 'mathematics',
               });
             }}>
@@ -119,7 +119,7 @@ const HomeScreen = () => {
 
           <TouchableNativeFeedback
             onPress={() => {
-              navagation.navigate('ComingSoonScreen');
+              navigation.navigate('ComingSoonScreen');
             }}>
             <View
               style={{...styles.sectionItem, backgroundColor: colors.green}}>
@@ -129,7 +129,7 @@ const HomeScreen = () => {
           </TouchableNativeFeedback>
           <TouchableNativeFeedback
             onPress={() => {
-              navagation.navigate('PastPapersScreen');
+              navigation.navigate('PastPapersScreen');
             }}>
             <View
               style={{
@@ -142,7 +142,7 @@ const HomeScreen = () => {
           </TouchableNativeFeedback>
           <TouchableNativeFeedback
             onPress={() => {
-              navagation.navigate('QuestionScreen');
+              navigation.navigate('QuestionScreen');
             }}>
             <View style={{...styles.sectionItem, backgroundColor: colors.grey}}>
               <MCicon
@@ -156,7 +156,7 @@ const HomeScreen = () => {
 
           <TouchableNativeFeedback
             onPress={() => {
-              navagation.navigate('ResourceScreen');
+              navigation.navigate('ResourceScreen');
             }}>
             <View
               style={{
@@ -198,7 +198,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     marginBottom: 10,
     lineHeight: 35,
-    
   },
 
   showCase: {
