@@ -156,13 +156,39 @@ const HomeScreen = () => {
 
           <TouchableNativeFeedback
             onPress={() => {
+              navigation.navigate('ComingSoonScreen');
+            }}>
+            <View
+              style={{
+                ...styles.sectionItem,
+                backgroundColor: colors.purpleLight,
+              }}>
+              <IoIcon
+                name="play-circle-outline"
+                size={40}
+                color={colors.white}
+              />
+              <Text style={styles.sectionText}>Lessons</Text>
+            </View>
+          </TouchableNativeFeedback>
+
+          <TouchableNativeFeedback
+            onPress={() => {
+              navigation.navigate('ComingSoonScreen');
+            }}>
+            <View style={{...styles.sectionItem, backgroundColor: colors.gold}}>
+              <IoIcon name="people-outline" size={40} color={colors.white} />
+              <Text style={styles.sectionText}>Tutors</Text>
+            </View>
+          </TouchableNativeFeedback>
+          <TouchableNativeFeedback
+            onPress={() => {
               navigation.navigate('ResourceScreen');
             }}>
             <View
               style={{
                 ...styles.sectionItem,
                 backgroundColor: colors.purple,
-                marginBottom: 60,
               }}>
               <SIcon name="info" size={40} color={colors.white} />
               <Text style={styles.sectionText}>More...</Text>
@@ -219,6 +245,7 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'space-between',
     paddingHorizontal: 10,
+    marginBottom: 60,
   },
 
   sectionItem: {
