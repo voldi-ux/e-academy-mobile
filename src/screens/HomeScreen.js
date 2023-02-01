@@ -161,6 +161,23 @@ const HomeScreen = () => {
             <View
               style={{
                 ...styles.sectionItem,
+                backgroundColor: colors.pink,
+              }}>
+              <IoIcon
+                name="book-outline"
+                size={40}
+                color={colors.white}
+              />
+              <Text style={styles.sectionText}>Textbooks</Text>
+            </View>
+          </TouchableNativeFeedback>
+          <TouchableNativeFeedback
+            onPress={() => {
+              navigation.navigate('ComingSoonScreen');
+            }}>
+            <View
+              style={{
+                ...styles.sectionItem,
                 backgroundColor: colors.purpleLight,
               }}>
               <IoIcon
