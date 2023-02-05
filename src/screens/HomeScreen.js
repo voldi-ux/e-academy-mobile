@@ -21,6 +21,7 @@ import SearchInput from '../components/searchInput/SearchInput';
 import Tabs from '../components/tab/Tabs';
 import {colors} from '../resources/colors';
 import Menu from '../components/Menu/Menu';
+import PostComponent from '../components/post/Post';
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -214,7 +215,7 @@ const HomeScreen = () => {
         </View>
       </ScrollView>
       {/* conditionaly rendering the menu */}
-      {menuVisible && <Menu setVisible={setMenuVissible} />}
+      {menuVisible && <Menu setVisible={setMenuVissible} children={<PostComponent />}/>}
       <Tabs openMenu={() => setMenuVissible(true)} />
     </ImageBackground>
   );

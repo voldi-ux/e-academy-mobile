@@ -13,7 +13,7 @@ const QuestionsNumberScreen = () => {
     <View
       style={{
         flex: 1,
-              padding: 30,
+        padding: 30,
         paddingBottom:10,
       }}>
       <View style={styles.container}>

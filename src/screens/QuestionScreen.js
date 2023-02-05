@@ -21,6 +21,7 @@ import Tabs from '../components/tab/Tabs';
 import {colors} from '../resources/colors';
 import QuestionView from '../components/question/QuestionView';
 import Menu from '../components/Menu/Menu';
+import PostComponent from '../components/post/Post';
 
 const QuestionScreen = () => {
     const [menuVisible, setMenuVissible] = useState(false);
@@ -47,7 +48,9 @@ const QuestionScreen = () => {
         <QuestionView />
       </ScrollView>
 
-      {menuVisible && <Menu setVisible={setMenuVissible} />}
+      {menuVisible && (
+        <Menu setVisible={setMenuVissible} children={<PostComponent />} />
+      )}
       <Tabs openMenu={() => setMenuVissible(true)} />
     </ImageBackground>
   );

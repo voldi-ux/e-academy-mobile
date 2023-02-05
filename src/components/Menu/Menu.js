@@ -6,6 +6,7 @@ import {
   PanResponder,
   useWindowDimensions,
   BackHandler,
+  KeyboardAvoidingView
 } from 'react-native';
 
 const Menu = ({setVisible, children}) => {
@@ -85,14 +86,17 @@ const Menu = ({setVisible, children}) => {
   }, []);
 
   return (
-    <View style={{...styles.container, height: screenHeight}}>
+    <KeyboardAvoidingView
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+      style={{...styles.container, height: screenHeight}}>
       <Animated.View
-        style={{...styles.menu, transform: [{translateY: translateValue}]}}
-        {...pan.panHandlers}>
-        <View style={styles.bar}></View>
+        style={{...styles.menu, transform: [{translateY: translateValue}]}}>
+        <View style={styles.barContainer} {...pan.panHandlers}>
+          <View style={styles.bar}></View>
+        </View>
         {children}
       </Animated.View>
-    </View>
+    </KeyboardAvoidingView>
   );
 };
 
@@ -112,13 +116,18 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     bottom: 0,
-    paddingTop: 5,
     borderTopLeftRadius: 15,
     borderTopRightRadius: 15,
   },
+
+  barContainer: {
+    width:"100%",
+    alignItems: "center",
+    paddingVertical:10,
+  },
   bar: {
     width: '40%',
-    height: 4,
+    height: 5,
     backgroundColor: '#d7dae1e0',
     borderRadius: 10,
   },
