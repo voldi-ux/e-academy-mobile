@@ -12,7 +12,7 @@ Work on past exam papers ,
 Can track their performace ,
 Can compare their performace with other students who are doing the same subjects , 
 Can book for tutors if needed , 
-And they have will have access to video lessons , 
+And they  will have access to video lessons , 
 And more
 
 
