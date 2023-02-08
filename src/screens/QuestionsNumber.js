@@ -4,7 +4,7 @@ import {
   Text,
   StyleSheet,
   TextInput,
-    TouchableOpacity,
+  TouchableOpacity,
 } from 'react-native';
 import {colors} from '../resources/colors';
 
@@ -14,7 +14,7 @@ const QuestionsNumberScreen = () => {
       style={{
         flex: 1,
         padding: 30,
-        paddingBottom:10,
+        paddingBottom: 10,
       }}>
       <View style={styles.container}>
         <Text style={styles.heading}>
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
   button: {
     marginTop: 'auto',
     alignItems: 'center',
-    height: 50,
+    padding: 10,
     backgroundColor: colors.purple,
     justifyContent: 'center',
     borderRadius: 100,

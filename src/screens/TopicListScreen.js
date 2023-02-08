@@ -81,21 +81,21 @@ const styles = StyleSheet.create({
 
   heading: {
     fontSize: 20,
-    fontWeight:"600",
+    fontWeight: '600',
     color: colors.blueDark,
     fontWeight: '500',
-    marginLeft:50,
+    marginLeft: 50,
   },
 
   button: {
     width: '96%',
-    height: 40,
+    padding: 10,
     borderRadius: 100,
     backgroundColor: colors.blueDark2,
     justifyContent: 'center',
 
-      alignSelf: 'center',
-    marginVertical:10,
+    alignSelf: 'center',
+    marginVertical: 10,
   },
 
   buttonTxt: {

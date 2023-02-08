@@ -53,17 +53,17 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 10,
     width: '100%',
-    height: 40,
+    padding: 10,
     backgroundColor: colors.purple,
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 40,
   },
-    buttonText: {
-        fontSize: 20,
-        color: colors.white,
-        fontWeight:"600 "
-  }
+  buttonText: {
+    fontSize: 20,
+    color: colors.white,
+    fontWeight: '600 ',
+  },
 });
 
 export default GradeSelectionScreen;

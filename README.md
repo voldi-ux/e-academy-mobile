@@ -1,9 +1,20 @@
 # e-academy-mobile
+This is the mobile version of the app that goes with e-academy ===> the admin board.
 
-## Designs can be found in the design folder
+This app was inspired by the fact that most of SA educational apps only provided students with past papers and if it they provided other features then those features were not free. Having being a student myself it was extremely hard to find study resouces that were relevant to the SA curriculum and so I want to make it easier for the next generations to find resouce study resources.   
 
-## please use java 11 to avoid compilation errors because of gradle
+This is an all in one educational app for high school studends. It will be free of charge to use and it will have many features that will help contribute to student success
 
-## to ensure that all the components built look the same please use an emulator or a device with 1080px by 760px screen resolution.
+# features: students can :
+Post questions 
+Practice Problems 
+Work on past exam papers
+Can track their performace
+Can compare their performace with other students who are doing the same subjects
+Can book for tutors if needed
+And they have will have access to video lessons
+And more
 
-## to use colors please import the colors ojbect I have created found in resource folder
+
+# feel free to fork the prject and contribute
+
