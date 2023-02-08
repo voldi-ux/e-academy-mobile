@@ -6,13 +6,13 @@ This app was inspired by the fact that most of SA educational apps only provided
 This is an all in one educational app for high school studends. It will be free of charge to use and it will have many features that will help contribute to student success
 
 # features ==> students can :
-Post questions 
-Practice Problems 
-Work on past exam papers
-Can track their performace
-Can compare their performace with other students who are doing the same subjects
-Can book for tutors if needed
-And they have will have access to video lessons
+Post questions , 
+Practice Problems ,
+Work on past exam papers ,
+Can track their performace ,
+Can compare their performace with other students who are doing the same subjects , 
+Can book for tutors if needed , 
+And they have will have access to video lessons , 
 And more
 
 
