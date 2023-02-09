@@ -22,9 +22,21 @@ import {colors} from '../resources/colors';
 import QuestionView from '../components/question/QuestionView';
 import Menu from '../components/Menu/Menu';
 import PostComponent from '../components/post/Post';
+import QuestionViewModal from '../components/question/QuestionViewModal';
 
 const QuestionScreen = () => {
-    const [menuVisible, setMenuVissible] = useState(false);
+  const [menuVisible, setMenuVissible] = useState(false);
+  const [questionVisible, setQuestionVisible] = useState(false);
+
+  //question => the question the use wants to view on the screen. This is the same question that will be passed to the question modal
+  const [question, setQuestion] = useState();
+
+  //each question component should set its own question when pressed
+  const handlePress = question => {
+    setQuestionVisible(true); //open the modal
+    setQuestion(question); //sets the question
+  };
+
   return (
     <ImageBackground
       source={require('../resources/images/bg.png')}
@@ -41,17 +53,27 @@ const QuestionScreen = () => {
           <SearchInput />
         </View>
 
-        <QuestionView />
-        <QuestionView />
-        <QuestionView />
-        <QuestionView />
-        <QuestionView />
+        <QuestionView handlePress={handlePress} />
+        <QuestionView handlePress={handlePress} />
+        <QuestionView handlePress={handlePress} />
+        <QuestionView handlePress={handlePress} />
+        <QuestionView handlePress={handlePress} />
       </ScrollView>
 
       {menuVisible && (
         <Menu setVisible={setMenuVissible} children={<PostComponent />} />
       )}
+      {questionVisible && (
+        <Menu
+          setVisible={setQuestionVisible}
+          children={<QuestionViewModal />}
+        />
+      )}
       <Tabs openMenu={() => setMenuVissible(true)} />
+      <View
+        style={{
+          marginTop: 55,
+        }}></View>
     </ImageBackground>
   );
 };
@@ -69,9 +91,6 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     marginBottom: 20,
   },
-
- 
-
 });
 
 export default QuestionScreen;

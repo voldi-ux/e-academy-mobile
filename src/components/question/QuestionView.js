@@ -1,10 +1,10 @@
 import React from 'react';
-import {View, StyleSheet, TouchableOpacity, Image, Text} from 'react-native';
+import {View, StyleSheet, TouchableOpacity, Image, Text, Pressable} from 'react-native';
 
 import IoIcon from 'react-native-vector-icons/Ionicons';
 import {colors} from '../../resources/colors';
 
-const QuestionView = () => {
+const QuestionView = ({ handlePress}) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -22,19 +22,23 @@ const QuestionView = () => {
           <IoIcon name="share-social-outline" size={30} color={colors.white} />
         </TouchableOpacity>
       </View>
-      {/* question descrtiopn */}
-      <Text style={styles.descriptionTxt}>
-        {' '}
-        How do I solve for x in this problem ?{' '}
-      </Text>
-      {/* images container if any */}
-      <View style={styles.imageContainer}>
-        <Image
-          resizeMode="contain"
-          style={styles.image}
-          source={require('../../resources/images/math.png')}
-        />
-      </View>
+      <Pressable onPress={() => { 
+        handlePress();
+      }}>
+        {/* question descrtiopn */}
+        <Text style={styles.descriptionTxt}>
+          {' '}
+          How do I solve for x in this problem ?{' '}
+        </Text>
+        {/* images container if any */}
+        <View style={styles.imageContainer}>
+          <Image
+            resizeMode="contain"
+            style={styles.image}
+            source={require('../../resources/images/math.png')}
+          />
+        </View>
+      </Pressable>
 
       {/* footer/ buttons */}
       <View style={styles.footer}>
