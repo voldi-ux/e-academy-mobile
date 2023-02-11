@@ -8,6 +8,8 @@ import {
   ScrollView,
 } from 'react-native';
 
+
+//icons
 import IoIcon from 'react-native-vector-icons/Ionicons';
 import Micon from 'react-native-vector-icons/MaterialIcons';
 import MCicon from 'react-native-vector-icons/MaterialCommunityIcons';

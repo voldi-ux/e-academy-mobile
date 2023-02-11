@@ -5,6 +5,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
+//screens
 import HomeScreen from './src/screens/HomeScreen';
 import PostScreen from './src/screens/PostScreen';
 import ProfileScreen from './src/screens/ProfileScreen';
@@ -19,6 +20,7 @@ import GradeSelectionScreen from "./src/screens/GardeSelectionScreen"
 import OpenQuestionScreen from './src/screens/OpenPaper';
 import ViewPdfSCreen from './src/screens/ViewPdfScreen';
 import QuestionsNumberScreen from './src/screens/QuestionsNumber';
+import CompletionScreen from './src/screens/CompletionScreen';
 
 const {Navigator, Screen} = createNativeStackNavigator();
 
@@ -26,7 +28,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <StatusBar backgroundColor={'#20385C'} />
-      <Navigator initialRouteName="HomeScreen">
+      <Navigator initialRouteName="CompletionScreen">
         <Screen
           name="HomeScreen"
           component={HomeScreen}
@@ -127,6 +129,13 @@ const App = () => {
         <Screen
           name="QuestionsNumberScreen"
           component={QuestionsNumberScreen}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Screen
+          name="CompletionScreen"
+          component={CompletionScreen}
           options={{
             headerShown: false,
           }}
