@@ -6,6 +6,7 @@ Project link [https://github.com/voldi-ux/e-academy](https://github.com/voldi-ux
 # License
 This project is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/) license
 
+# About
 This app was inspired by the fact that most of SA educational apps only provided students with past papers and if it they provided other features then those features were not free. Having being a student myself it was extremely hard to find study resouces that were relevant to the SA curriculum and so I want to make it easier for the next generations to find study   resources.   
 
 This is an all in one educational app for high school studends. It will be free of charge to use and it will have many features that will help contribute to student success
