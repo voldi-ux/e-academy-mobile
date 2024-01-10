@@ -23,6 +23,8 @@ import CompletionScreen from './src/screens/CompletionScreen';
 import AuthScreenSignIn from './src/screens/AuthScreenSignIn';
 import AuthScreenSignUp from './src/screens/AuthScreeenSignUp';
 import EmailVerificationScreen from './src/screens/EmailVerificationScreen';
+import LandingScreen from './src/screens/LandingScreen';
+import LandingDetailsScreen from './src/screens/LandingDetailsScreen';
 
 const {Navigator, Screen} = createNativeStackNavigator();
 
@@ -30,7 +32,23 @@ const App = () => {
   return (
     <NavigationContainer>
       <StatusBar backgroundColor={'#20385C'} />
-      <Navigator initialRouteName="AuthScreenSignin">
+      <Navigator initialRouteName="LandingScreen">
+        <Screen
+          name="LandingScreen"
+          component={LandingScreen}
+          options={{
+            headerShown: false,
+          }}
+        />
+
+        <Screen
+          name="LandingPageDetailsScreen"
+          component={LandingDetailsScreen}
+          options={{
+            headerShown: false,
+          }}
+        />
+
         <Screen
           name="HomeScreen"
           component={HomeScreen}
@@ -160,7 +178,7 @@ const App = () => {
             headerShown: false,
           }}
         />
-        
+
         <Screen
           name="EmailVerificationScreen"
           component={EmailVerificationScreen}
@@ -168,7 +186,6 @@ const App = () => {
             headerShown: false,
           }}
         />
-
       </Navigator>
     </NavigationContainer>
   );
