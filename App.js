@@ -2,8 +2,7 @@ import React from 'react';
 import {StatusBar} from 'react-native';
 
 import {NavigationContainer} from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 //screens
 import HomeScreen from './src/screens/HomeScreen';
@@ -16,11 +15,14 @@ import ComingSoonScreen from './src/screens/ComingSoonScreen';
 import TopicListScreen from './src/screens/TopicListScreen';
 import ResourceScreen from './src/screens/ResourceScreen';
 import PapersScreen from './src/screens/PastPpaersScreen';
-import GradeSelectionScreen from "./src/screens/GardeSelectionScreen"
+import GradeSelectionScreen from './src/screens/GardeSelectionScreen';
 import OpenQuestionScreen from './src/screens/OpenPaper';
 import ViewPdfSCreen from './src/screens/ViewPdfScreen';
 import QuestionsNumberScreen from './src/screens/QuestionsNumber';
 import CompletionScreen from './src/screens/CompletionScreen';
+import AuthScreenSignIn from './src/screens/AuthScreenSignIn';
+import AuthScreenSignUp from './src/screens/AuthScreeenSignUp';
+import EmailVerificationScreen from './src/screens/EmailVerificationScreen';
 
 const {Navigator, Screen} = createNativeStackNavigator();
 
@@ -28,7 +30,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <StatusBar backgroundColor={'#20385C'} />
-      <Navigator initialRouteName="CompletionScreen">
+      <Navigator initialRouteName="AuthScreenSignin">
         <Screen
           name="HomeScreen"
           component={HomeScreen}
@@ -140,6 +142,33 @@ const App = () => {
             headerShown: false,
           }}
         />
+
+        {/* must append screen to the subsequent screen names */}
+
+        <Screen
+          name="AuthScreenSignIn"
+          component={AuthScreenSignIn}
+          options={{
+            headerShown: false,
+          }}
+        />
+
+        <Screen
+          name="AuthScreenSignUp"
+          component={AuthScreenSignUp}
+          options={{
+            headerShown: false,
+          }}
+        />
+        
+        <Screen
+          name="EmailVerificationScreen"
+          component={EmailVerificationScreen}
+          options={{
+            headerShown: false,
+          }}
+        />
+
       </Navigator>
     </NavigationContainer>
   );

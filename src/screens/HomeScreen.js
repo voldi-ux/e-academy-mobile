@@ -27,7 +27,6 @@ const HomeScreen = () => {
   const navigation = useNavigation();
   const [menuVisible, setMenuVissible] = useState(false);
 
-  console.log(navigation.getState());
 
   return (
     <ImageBackground

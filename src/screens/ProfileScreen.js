@@ -11,7 +11,8 @@ import Tabs from '../components/tab/Tabs';
 import SIcon from 'react-native-vector-icons/SimpleLineIcons';
 import {colors} from '../resources/colors';
 
-const ProfileScreen = ({navigation}) => {
+const ProfileScreen = ({ navigation }) => {
+  const handleSignOut = () => navigation.navigate('AuthScreenSignIn'); 
   return (
     <View
       style={{
@@ -67,7 +68,7 @@ const ProfileScreen = ({navigation}) => {
           <Text style={styles.detail2}>Had 20 in-person tutoring lessons </Text>
         </View>
 
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={handleSignOut}>
           <IoIcon name="log-out-outline" size={35} color={colors.white} />
           <Text style={styles.buttonTxt}>Log Out</Text>
         </TouchableOpacity>
