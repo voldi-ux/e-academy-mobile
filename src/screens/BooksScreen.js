@@ -12,44 +12,38 @@ import {colors} from '../resources/colors';
 
 const data = [
   {
-    title: 'Bursaries And Scholarships',
+    title: 'Mathematics',
     data: [
-      'The Mukuru Bursary',
-      'Nsfas 2023',
-      'American study abroad scholar',
-      'Canadian scholarship',
-      'James Smith Educational funds',
-      'Fundi Scheme Bursary',
-      'Aviation Scholarship',
+      'Grade 12 Maths Siyavula',
+      'Grade 11 Maths Siyavula',
+      'Grade 10 Maths Siyavula',
+      'Grade 12 Maths study guide',
+    ],
+  },
+
+  {
+    title: 'Physical Sciences',
+    data: [
+      'Grade 12 physical sciences Siyavula',
+      'Grade 11 physical sciences Siyavula',
+      'Grade 10 physical sciences Siyavula',
+      'Grade 12 physical sciences study guide',
     ],
   },
   {
-    title: 'Internships',
+    title: 'Life Sciences',
     data: [
-      'Standard bank summer internship (2024)',
-      ' j&j Internship (2023)',
-      'Mukuru It internship (2023)',
-      'Entelct software developing internship (2023)',
-      'FNB internships (2023)',
-      'Shoprite BBE internship (2023)',
-      'Pick and Pay BEE internship (2023)',
-    ],
-  },
-  {
-    title: 'All About Univeristy',
-    data: [
-      'How to apply for a univerisity',
-      'How to get bursaries',
-      'How the aps point system work',
-      'Getting you ready for university lifestyle',
-      'Applying abroad',
+      'Grade 12 life sciences Siyavula',
+      'Grade 11 life sciences Siyavula',
+      'Grade 10 life sciences Siyavula',
+      'Grade 12 life sciences study guide',
     ],
   },
 ];
 
 //must work on the item seperator (important)
 
-const ResourceScreen = ({navigation}) => {
+const BooksScreen = ({navigation}) => {
   const renderItem = ({item}) => {
     return (
       <View style={styles.sectionItem}>
@@ -75,10 +69,9 @@ const ResourceScreen = ({navigation}) => {
             color={colors.blueDark}
           />
         </TouchableOpacity>
-        <Text style={styles.heading}>Resources</Text>
+        <Text style={styles.heading}>Books</Text>
         <View></View>
       </View>
-
 
       <SectionList
         style={styles.sections}
@@ -118,8 +111,8 @@ const styles = StyleSheet.create({
 
   sections: {
     padding: 5,
-      marginHorizontal: 5,
-    marginBottom:20,
+    marginHorizontal: 5,
+    marginBottom: 20,
   },
   toggleText: {
     fontSize: 18,
@@ -150,4 +143,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ResourceScreen;
+export default BooksScreen;

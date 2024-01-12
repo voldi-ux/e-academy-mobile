@@ -25,6 +25,8 @@ import AuthScreenSignUp from './src/screens/AuthScreeenSignUp';
 import EmailVerificationScreen from './src/screens/EmailVerificationScreen';
 import LandingScreen from './src/screens/LandingScreen';
 import LandingDetailsScreen from './src/screens/LandingDetailsScreen';
+import BooksScreen from './src/screens/BooksScreen';
+import EidfySCreen from './src/screens/EdifyScreem';
 
 const {Navigator, Screen} = createNativeStackNavigator();
 
@@ -87,6 +89,15 @@ const App = () => {
             headerShown: false,
           }}
         />
+
+        <Screen
+          name="EdifyScreen"
+          component={EidfySCreen}
+          options={{
+            headerShown: false,
+          }}
+        />
+
         <Screen
           name="QuestionScreen"
           component={QuestionScreen}
@@ -123,6 +134,15 @@ const App = () => {
             headerShown: false,
           }}
         />
+
+        <Screen
+          name="BooksScreen"
+          component={BooksScreen}
+          options={{
+            headerShown: false,
+          }}
+        />
+
         <Screen
           name="GradeSelectionScreen"
           component={GradeSelectionScreen}

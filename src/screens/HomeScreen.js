@@ -106,27 +106,25 @@ const HomeScreen = () => {
             <View
               style={{...styles.sectionItem, backgroundColor: colors.orange}}>
               <IoIcon name="flask-outline" size={40} color={colors.white} />
-              <Text style={styles.sectionText}>Science</Text>
+              <Text style={styles.sectionText}>Physics</Text>
             </View>
           </TouchableNativeFeedback>
 
           <TouchableNativeFeedback>
             <View style={{...styles.sectionItem, backgroundColor: colors.red}}>
-              <MCicon name="rocket-outline" size={50} color={colors.white} />
-              <Text style={styles.sectionText}>MCQs</Text>
+              <MCicon name="dna" size={50} color={colors.white} />
+              <Text style={styles.sectionText}>Life sciences</Text>
             </View>
           </TouchableNativeFeedback>
 
-          <TouchableNativeFeedback
-            onPress={() => {
-              navigation.navigate('ComingSoonScreen');
-            }}>
+          <TouchableNativeFeedback onPress={() => navigation.navigate("EdifyScreen")}>
             <View
-              style={{...styles.sectionItem, backgroundColor: colors.green}}>
-              <IoIcon name="calendar-outline" size={40} color={colors.white} />
-              <Text style={styles.sectionText}>Schedules</Text>
+              style={{...styles.sectionItem, backgroundColor: colors.yellow}}>
+              <MCicon name="robot-outline" size={50} color={colors.white} />
+              <Text style={styles.sectionText}>Edify</Text>
             </View>
           </TouchableNativeFeedback>
+
           <TouchableNativeFeedback
             onPress={() => {
               navigation.navigate('PastPapersScreen');
@@ -156,18 +154,14 @@ const HomeScreen = () => {
 
           <TouchableNativeFeedback
             onPress={() => {
-              navigation.navigate('ComingSoonScreen');
+              navigation.navigate('BooksScreen');
             }}>
             <View
               style={{
                 ...styles.sectionItem,
                 backgroundColor: colors.pink,
               }}>
-              <IoIcon
-                name="book-outline"
-                size={40}
-                color={colors.white}
-              />
+              <IoIcon name="book-outline" size={40} color={colors.white} />
               <Text style={styles.sectionText}>Textbooks</Text>
             </View>
           </TouchableNativeFeedback>
@@ -200,6 +194,17 @@ const HomeScreen = () => {
           </TouchableNativeFeedback>
           <TouchableNativeFeedback
             onPress={() => {
+              navigation.navigate('ComingSoonScreen');
+            }}>
+            <View
+              style={{...styles.sectionItem, backgroundColor: colors.green}}>
+              <IoIcon name="calendar-outline" size={40} color={colors.white} />
+              <Text style={styles.sectionText}>Schedules</Text>
+            </View>
+          </TouchableNativeFeedback>
+
+          <TouchableNativeFeedback
+            onPress={() => {
               navigation.navigate('ResourceScreen');
             }}>
             <View
@@ -214,7 +219,9 @@ const HomeScreen = () => {
         </View>
       </ScrollView>
       {/* conditionaly rendering the menu */}
-      {menuVisible && <Menu setVisible={setMenuVissible} children={<PostComponent />}/>}
+      {menuVisible && (
+        <Menu setVisible={setMenuVissible} children={<PostComponent />} />
+      )}
       <Tabs openMenu={() => setMenuVissible(true)} />
     </ImageBackground>
   );
@@ -273,12 +280,14 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     borderRadius: 10,
     elevation: 5,
+    padding:10
   },
 
   sectionText: {
     color: colors.white,
     fontSize: 15,
     fontWeight: '500',
+    marginTop: "auto"
   },
 });
 
